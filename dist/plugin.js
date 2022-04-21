@@ -171,7 +171,7 @@ var getCompareSnapshotsPlugin = function getCompareSnapshotsPlugin(on, config) {
     (0, _utils.setFilePermission)(details.path, 511);
     (0, _utils.setFilePermission)(_config["default"].image.comparison(details.name), 511);
 
-    if (config.preserveOriginalScreenshot === true) {
+    if (config.env.preserveOriginalScreenshot === true) {
       (0, _utils.renameAndCopyFile)(details.path, _config["default"].image.comparison(details.name));
     } else {
       (0, _utils.renameAndMoveFile)(details.path, _config["default"].image.comparison(details.name));

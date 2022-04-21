@@ -139,7 +139,7 @@ const getCompareSnapshotsPlugin = (on, config) => {
     setFilePermission(details.path, 0o777)
     setFilePermission(paths.image.comparison(details.name), 0o777)
 
-    if (config.preserveOriginalScreenshot === true) {
+    if (config.env.preserveOriginalScreenshot === true) {
       renameAndCopyFile(details.path, paths.image.comparison(details.name))
     } else {
       renameAndMoveFile(details.path, paths.image.comparison(details.name))
